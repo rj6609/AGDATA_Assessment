@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" #personForm="ngForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required [(ngModel)]="person.name" name="name">
+  
+    <label for="address">Address:</label>
+    <input type="text" id="address" required [(ngModel)]="person.address" name="address">
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+  <div *ngIf="submittedPerson">
+    <h3>Submitted Person</h3>
+    <p>Name: {{submittedPerson.name}}</p>
+    <p>Address: {{submittedPerson.address}}</p>
+  </div>
+  
